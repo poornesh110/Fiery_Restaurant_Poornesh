@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-header text-center">
+        Order Details
+    </div>
+    <div class="card-body">
+        <div class="order-info">
+            <h5>Order Number: {{order.orderNumber}}</h5>
+            <p>Contact Name: {{order.contactName}}</p>
+            <p>Order Date : {{order.OrderDate}}</p>
+            <p>Order Total :{{order.grandTotal}}</p>
+            <p>Delivered Address - Church Street, New York</p>
+            <p>Delivered by - Mr Joseph</p>
+            <p>Delivered On - 22th March 2022</p>
+        </div>
+        <button class="btn btn-primary btn-back"><a style="color: white; text-decoration: none;"
+                routerLink="/orders">Back to All
+                Orders</a></button>
+        <router-outlet></router-outlet>
+    </div>
+</div>

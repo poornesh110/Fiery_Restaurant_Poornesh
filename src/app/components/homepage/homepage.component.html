@@ -1,0 +1,21 @@
+<div class="parent" *ngIf="isPlaced()===false">
+    <div class="content" style="height: 700px; width: 500px;">
+        <h1>Welcome to Feiry Restaurant</h1>
+        <h6>The place where you can get the best quality food at your doorstep</h6>
+        <a routerLink="/placeOrder" class="btn-place-order">Place Order Now</a>
+    </div>
+    <div>
+        <img src="../../../assets/Images/homepageImage.jpg" alt="homepageImage">
+    </div>
+</div>
+
+<div class="parent" *ngIf="isPlaced()">
+    <div class="content" style="height: 400px; width: 500px;">
+        <h1>SitBack and Enjoy</h1><br><br>
+        <h4>Your Order is On the way and will be delivered to your mentioned Address</h4>
+    </div>
+    <div>
+        <img src="../../../assets/Images/homepageImage.jpg" alt="homepageImage">
+    </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,29 @@
+<div class="container" style="margin-top: 80px;">
+    <table class="table table-light table-hover table-borderless">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Order Number</th>
+                <th scope="col">Order Contact Name</th>
+                <th scope="col">Order Items</th>
+                <th scope="col">Items Ordered</th>
+                <th scope="col">Order Total</th>
+                <th scope="col">View Order Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of allOrders">
+                <th scope="row">{{item.orderNumber}}</th>
+                <td>{{item.contactName}}</td>
+                <td>{{item.itemsOrdered}}</td>
+                <div *ngFor="let x of item.items">
+                    <td rowspan="2">
+                        {{x.id}}
+                    </td>
+                </div>
+                <td>{{item.grandTotal}}</td>
+                <td><button type="button" class="btn btn-info" (click)="getOrderInfo(item.id)">View Order
+                        Info</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
